@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #parent{
+            display: flex;
+            background-color:rgb(32, 32, 75);
+            border-radius: 10px;
+            
+            
+
+        }
+        #parent div{
+            display: inline-block;
+            
+        
+
+        }
+       #first{
+        text-align: start;
+        width: 50%;
+        color: white;
+        padding-left: 30px;
+
+       }
+       #first > div{
+        text-align: initial;
+       }
+       #last{
+        display: flex;
+        
+        width: 50%;
+        
+        margin: auto;
+        color: white;
+        font-weight: bold;
+       }
+       #last > div{
+        margin-right: 100px;
+        text-align: center;
+        padding: 10px;
+        margin-left: 10px;
+        
+       }
+       button{
+        background-color:rgb(32, 32, 75);
+        color: white;
+        border: none;
+        cursor: pointer;
+       }
+     
+
+      
+    </style>
+</head>
+<body>
+    <div id="parent">
+       <div id="first">
+        <h4>Reebok</h4>
+       </div>
+       <div id="last">
+       <div><button>Men</button></div>
+       <div><button>Women</button></div>
+       <div><button id="login" >Login</button></div>
+       <div><button id="signup" >SignUp</button></div>
+    </div>
+    </div>
+</body>
+</html>
+<script>
+      document.getElementById("signup").onclick=function(){    
+        location.href="file:///C:/masai%202/SKIN-STORE/SignUp.html";
+        
+    }
+    document.getElementById("login").onclick=function(){
+        location.href="file:///C:/masai%202/SKIN-STORE/signin.html"
+    }
+</script>
