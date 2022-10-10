@@ -5,8 +5,73 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        #parent{
+            display: flex;
+            background-color:rgb(32, 32, 75);
+            border-radius: 10px;
+            
+            
+
+        }
+        #parent div{
+            display: inline-block;
+            
+        
+
+        }
+       #first{
+        text-align: start;
+        width: 50%;
+        color: white;
+        padding-left: 30px;
+
+       }
+       #first > div{
+        text-align: initial;
+       }
+       #last{
+        display: flex;
+        
+        width: 50%;
+        
+        margin: auto;
+        color: white;
+        font-weight: bold;
+       }
+       #last > div{
+        margin-right: 100px;
+        text-align: center;
+        padding: 10px;
+        margin-left: 10px;
+        
+       }
+       #log{
+        background-color:rgb(32, 32, 75);
+        color: white;
+        border: none;
+        cursor: pointer;
+       }
+       #sig{
+        background-color:rgb(32, 32, 75);
+        color: white;
+        border: none;
+        cursor: pointer;
+       }
+      
+    </style>
 </head>
 <body>
-    
+    <div id="parent">
+       <div id="first">
+        <h4>Reebok</h4>
+       </div>
+       <div id="last">
+       <div><h4>men</h4></div>
+       <div><h4>women</h4></div>
+       <div><button id="log">Login</button></div>
+       <div><button id="sig">SignUp</button></div>
+    </div>
+    </div>
 </body>
 </html>
