@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <style>
+        #container{
+            width: 20%;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:rgb(163, 195, 196);
+            padding:10px;
+        }
+        form{
+        margin: -25px 0px  5px 0px;
+           padding: 25px;
+        }
+        input[type=name],input[type=email],input[type=text]{
+            width: 90%;
+            padding: 8px;
+            margin: 5px 0px;
+        }
+        input[type=submit],button{
+            width: 100%;
+            margin: 5px 0px;
+            padding: 8px;
+            border: 0;
+            background-color: grey;
+           
+        }
+        div > h2{
+            font-weight: normal;
+
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h2>-Visitor-</h2>
+        <form action="">
+            <input type="name" name="UserName" placeholder="Full name" id="name"><br>
+            <input type="email" name="Email" id="email" placeholder="Email"><br>
+            <input type="text" name="text" id="org" placeholder="Organization"><br>
+            <input type="submit"><br>
+            <button>Return</button>
+        </form>
+    </div>
+</body>
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit",SignUp);
+    var arr = [];
+    function SignUp(e){
+        e.preventDefault();
+        var UserName = document.getElementById("name").value;
+        var Email = document.getElementById("email").value;
+        var Org = document.getElementById("org").value;
+
+        var info={
+            user:UserName,
+            Email: Email,
+            Org: Org,
+        };
+        console.log(info);
+        arr.push(info);
+        localStorage.setItem("user", JSON.stringify(arr));
+    }
+    
+
+</script>
